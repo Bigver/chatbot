@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="static/css/window.css">
+    <link rel="stylesheet" href="static/css/About.css">
+
+</head>
+
+<body>
+    
+        <!-- <h1 class = "text">M Talk</h1> -->
+        <!-- header -->
+        <section id="header">
+          <div class="header container">
+              <div class="nav-bar">
+                  <div class="brand">
+                    <img class="imgg" src="./assets/Untitled-1.png" alt=""  >
+                  </div>
+                  <div class="nav-list">
+                      <div class="hamburgur"><div class="bar"></div></div>
+                      <ul>
+                          <li><a href="./index.html" data-after="Home">Home</a></li>
+                          <li><a href="./About.html" data-after="About">About</a></li>
+                          <li><a href="./contact.html" data-after="Contact">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+    
+
+    <section class="section">
+        <div class="title">
+          <h2>ABOUT</h2>
+          <p>
+            เว็ปไซต์แชทบอทเพื่อตอบปัญหาด้านสุขภาพจิตและสามารสอบถามเกี่ยวกับโรคโควิดที่เป็นต้นเหตุทำให้เกิดปัญหาสุขภาพจิตได้ สามารถพิมพ์โต้ตอบได้
+          </p>
+        </div>
+  
+        <div class="about-center section-center">
+          <article class="about-img">
+            <img src="./assets/pexels-invisiblepower-1076885.jpg" alt="" />
+          </article>
+          <article class="about">
+            <!-- btn container -->
+            <div class="btn-container">
+              <button class="tab-btn active" data-id="history">history</button>
+              <button class="tab-btn" data-id="vision">vision</button>
+              <button class="tab-btn" data-id="goals">goals</button>
+            </div>
+            <div class="about-content">
+              <!-- single item -->
+              <div class="content active" id="history">
+                <h4>history</h4>
+                <p>
+                  เว็ปไซต์แชทบอทเพื่อตอบปัญหาสุขภาพจิตนี้จัดทำเพื่อเป็นโปรเจครายวิชา 305111 Soft Skills I มหาวิทยาลัยนเรศวร
+                </p>
+              </div>
+              <!-- end of single item -->
+              <!-- single item -->
+              <div class="content" id="vision">
+                <h4>vision</h4>
+                <p>
+                  ช่วยเหลือด้านปัญหาสุขภาพจิต
+                </p>
+              </div>
+              <!-- end of single item -->
+              <!-- single item -->
+              <div class="content" id="goals">
+                <h4>goals</h4>
+                <p>
+                  ผู้จัดทำหวังว่าเว็ปไซต์นี้จะสามารถตอบปัญหาด้านสุขภาพจิต และ โต้ตอบเพื่อเป็นกำลังใจให้ผู้ที่มาใช้งาน
+                </p>
+              </div>
+              <!-- end of single item -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script src="static/scripts/affect.js"></script>
+
+</html>

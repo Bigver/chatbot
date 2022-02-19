@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="static/css/window.css">
+
+
+</head>
+
+<body>
+    
+        <!-- <h1 class = "text">M Talk</h1> -->
+        <!-- header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                <img src="./assets/Untitled-1.png" alt="" width="170px" >
+                </div>
+                <div class="nav-list">
+                    <div class="hamburgur"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="./index.html" data-after="Home">Home</a></li>
+                        <li><a href="./About.html" data-after="About">About</a></li>
+                        <li><a href="./contact.html" data-after="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero-secsion -->
+
+
+    <section id="Hero">
+        <div class="hero container">
+            <div id="aSide">
+                <model-viewer src="/static/Drossel.gltf" alt="model robot" auto-rotate camera-controls ar ios-src="/static/Drossel.gltf"></model-viewer>
+            </div>
+               <div class="chat-bar-collapsible">
+                   <button id="chat-button" type="button" class="collapsible">Chat with us!
+                       <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+                   </button>
+               
+       
+               <div class="content">
+                   <div class="full-chat-block">
+                       <!-- Message Container -->
+                       <div class="outer-container">
+                           <div class="chat-container">
+                               <!-- Messages -->
+                               <div id="chatbox">
+                                   <h5 id="chat-timestamp"></h5>
+                                   <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                               </div>
+       
+                               <!-- User input box -->
+                               <div class="chat-bar-input-block">
+                                   <div id="userInput">
+                                       <input id="textInput" class="input-box" type="text" name="msg"
+                                           placeholder="Tap 'Enter' to send a message">
+                                       <p></p>
+                                   </div>
+       
+                                   <div class="chat-bar-icons">
+                                       <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                           onclick="heartButton()"></i>
+                                       <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                           onclick="sendButton()"></i>
+                                   </div>
+                               </div>
+       
+                               <div id="chat-bar-bottom">
+                                   <p></p>
+                               </div>
+       
+                           </div>
+                       </div>
+       
+                   </div>
+               </div>
+       
+           </div>
+        </div>
+        
+</section>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script src="static/scripts/affect.js"></script>
+
+</html>

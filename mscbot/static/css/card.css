@@ -1,0 +1,96 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
+
+
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+    
+
+.card {
+    
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    margin-top: 200px;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .2s;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.card-list::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+
+.card-list::-webkit-scrollbar-thumb{
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px rgba(250, 250, 250, 0.25)
+}
+
+
+.card-list::-webkit-scrollbar-track{
+    box-shadow: inset 2px 2px 2px rgba(255, 252, 252, 0.25)
+}
+
+
+.card:hover{
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+
+.card:not(:first-child){
+    margin-left: -130px;
+}
+
+
+@media only screen and (max-width: 600px){
+    .card {
+        height: 400px;
+        width: 150px;
+        margin-top: 200px;
+    }
+}
+
+
+
+.card-header img{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 200px;
+}
+
+
+
+p {
+    margin-top: 15px;
+    color:  rgba(255, 252, 252, 0.25)   ;
+}

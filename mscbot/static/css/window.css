@@ -1,0 +1,353 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: calc(60% + 0.8vmin);
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(250, 250, 250);
+}
+
+a {
+    color: rgb(22, 18, 238);
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* header */
+#header .brand  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50px;
+}
+
+
+/* header */
+
+.header.container{
+    background-color: rgba(242, 230, 230, 0.05);}
+
+#header {
+    position:fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header{
+    min-height: 10vh;
+    animation: .5s ease;
+    height: 10px;
+}
+
+.header .nav-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1800px;
+    padding: 0 10px;
+    justify-content: space-between;
+
+
+}
+
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(23, 140, 218);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease;
+}
+
+#header .nav-list ul.active{
+    left: 0;
+}
+
+#header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 30px;
+    display: block;
+}
+/* ใช้ได้ */
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgb(240, 248, 255 , 0.021);
+    font-size: 10rem;
+    letter-spacing: 45px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}   
+
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+
+}
+
+#header .nav-list ul li:hover a{
+    color: rgb(82, 151, 255);
+    background-color: rgb(241, 241, 241) ;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid white;
+}
+
+/* เมนู */
+
+#header .hamburgur{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin: 20px;
+}
+
+#header .hamburgur::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburgur_puls 3s ease infinite;
+}
+
+
+#header .hamburgur .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+
+#header .hamburgur .bar::after,
+#header .hamburgur .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+
+}
+
+#header .hamburgur .bar::after{
+    top: 8px;
+}
+#header .hamburgur .bar::before{
+    bottom: 8px;
+}
+#header .hamburgur.active .bar::before{
+    bottom: 0;
+}
+#header .hamburgur.active .bar::after{
+    top:  0;
+}
+/* header */
+
+#Hero {
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    
+    
+}
+
+#Hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+#Hero::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+
+
+#Hero h1 {
+    font-size: 2.5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+    
+}
+
+#Hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(69, 4, 247);
+    animation:  text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+
+#Hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color:  rgba(84, 73, 240, 0.733);
+    background-color: transparent;
+    border: 2px solid rgb(69, 4, 247);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color , color ;
+}
+
+
+
+
+#Hero .cta:hover{
+    color: aliceblue;
+    background-color: rgb(69, 4, 247);
+
+}
+
+
+
+
+
+@keyframes  hamburgur_puls{
+    0%{
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+
+
+
+
+@media only screen and (min-width: 800px){
+    #header .hamburgur{
+        display: none;
+    }
+    
+    #header .nav-list ul{
+        position:  initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+    
+    
+    
+
+    #header .nav-list ul a::after{
+        display: none;
+    }
+    
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    
+    #header .nav-list ul li a{
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    
+
+}
+
+
+@media only screen and (max-width: 1200px){
+    #aSide model-viewer{
+       width: 50%;
+       height: 60vh;
+       right: -6%;
+       top : 18vh;
+    }
+}
+
+
+@media only screen and (max-height: 450px){
+    #aSide model-viewer{
+        position: fixed;
+        height: 70vh;
+        width: 80vh;
+        right: 0%;
+        top : 15vh;
+        
+    }
+}
+
+@media only screen and (max-width: 650px){
+    #aSide model-viewer{
+        height: 0vh;
+        width: 0vh;
+    }
+}
+
+
+
+img {
+    width: 17vh;
+    height: 17vh;
+}
+
+
+
+
